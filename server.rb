@@ -9,7 +9,7 @@ key_controller = Key_controller.new()
 # instead of having been required or loaded by another file
 if __FILE__ == $0
   scheduler = Rufus::Scheduler.new
-  scheduler.every '6000s' do
+  scheduler.every '60s' do
     key_controller.clean_keys
   end
 end
@@ -52,7 +52,7 @@ get '/delete_key/:key' do |key|
   end
 end
 
-# End point to keep the key alive. 
+# End point to keep the key alive.
 get '/keep_alive/:key' do |key|
   key_controller.keep_alive(key)
 end
