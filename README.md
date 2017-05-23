@@ -1,4 +1,5 @@
-Key Server problem:
+### Key Server problem:
+
 Write a server which can generate random api keys, assign them for usage and release them after sometime. Following endpoints should be available on the server to interact with it.
 
 E1. There should be one endpoint to generate keys.
@@ -15,3 +16,10 @@ Apart from these endpoints, following rules should be enforced:
 R1. All blocked keys should get released automatically within 60 secs if E3 is not called.
 
 No endpoint call should result in an iteration of whole set of keys i.e. no endpoint request should be O(n). They should either be O(lg n) or O(1).
+
+### Run the Application
+Run server with this command
+
+```
+ruby server.rb
+```
